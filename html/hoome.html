@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Jewelley - Luxury Jewelry</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&amp;family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#1A4D57", // Dark Teal for buttons and strong accents
+                        "primary-hover": "#133a42",
+                        "background-light": "#FDF6E9", // Creamy beige background
+                        "background-dark": "#121212", // Dark mode background
+                        "surface-light": "#FFFFFF",
+                        "surface-dark": "#1E1E1E",
+                        "text-main-light": "#2D2D2D",
+                        "text-main-dark": "#E0E0E0",
+                        "text-muted-light": "#666666",
+                        "text-muted-dark": "#A0A0A0",
+                        "accent-gold": "#C6A87C",
+                    },
+                    fontFamily: {
+                        display: ["Playfair Display", "serif"],
+                        body: ["Lato", "sans-serif"],
+                    },
+                    borderRadius: {
+                        DEFAULT: "4px",
+                        'lg': '8px',
+                        'xl': '12px',
+                        '2xl': '16px',
+                        '3xl': '24px',
+                        'full': '9999px',
+                    },
+                },
+            },
+        };
+    </script>
+<style>::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f1f1;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #d1d5db;
+            border-radius: 4px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #9ca3af;
+        }
+        .text-stroke-title {
+           -webkit-text-stroke: 1px currentColor; 
+           color: transparent;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark text-text-main-light dark:text-text-main-dark font-body antialiased selection:bg-accent-gold selection:text-white transition-colors duration-300">
+<nav class="w-full py-6 px-8 flex justify-between items-center max-w-7xl mx-auto">
+<div class="text-2xl font-display font-bold tracking-tight">Jewelley</div>
+<div class="hidden md:flex space-x-10 text-sm font-medium text-text-muted-light dark:text-text-muted-dark">
+<a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Home</a>
+<a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Collection</a>
+<a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Products</a>
+<a class="hover:text-primary dark:hover:text-white transition-colors" href="#">Contact</a>
+</div>
+<div class="flex items-center space-x-5">
+<button class="text-text-main-light dark:text-text-main-dark hover:text-primary transition-colors">
+<span class="material-icons-outlined text-xl">search</span>
+</button>
+<button class="text-text-main-light dark:text-text-main-dark hover:text-primary transition-colors">
+<span class="material-icons-outlined text-xl">favorite_border</span>
+</button>
+<button class="relative text-text-main-light dark:text-text-main-dark hover:text-primary transition-colors">
+<span class="material-icons-outlined text-xl">shopping_cart</span>
+<span class="absolute -top-1 -right-1 h-2 w-2 bg-red-500 rounded-full"></span>
+</button>
+<a class="bg-primary hover:bg-primary-hover text-white px-6 py-2 rounded-sm text-sm font-medium transition-colors" href="#">Login</a>
+</div>
+</nav>
+<header class="relative max-w-7xl mx-auto px-6 md:px-12 py-12 md:py-20 grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+<div class="relative z-10">
+<div class="absolute -top-8 left-0 text-accent-gold text-2xl animate-pulse">✦</div>
+<h1 class="font-display text-6xl md:text-7xl lg:text-8xl leading-tight text-text-main-light dark:text-text-main-dark mb-6">
+                Find 
+                <span class="inline-block relative align-middle mx-2 h-[0.8em] w-[1.5em] rounded-full overflow-hidden bg-gray-200">
+<img alt="Eye close up" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsx71Nft7VqZibugW83VE0337-26A3vkExla2SXIBtXs-aY8dC5iaRSKRcC1n4oN0mgNf9gDPAyIcvr0GPieriG5PPcd5cZ5-GSZf_Yv4FV8pj8c8DTAsBu99vHvJD8y96Ni2JJTg2DgoBIB2NNhpnnAJqBB84WBlf-369RugcrVayqi7jKt762ZE5Ln1rQVKErr8yrOc7g61rHyt3zaO0Z5p-UTvGuKVl4Ydh_SV4XRCHXT8T0LD34J4HvXClfLeI_i77kxKGnCM"/>
+</span>
+                Your <br/>
+<span class="italic font-light">Perfect</span> Piece
+            </h1>
+<p class="text-text-muted-light dark:text-text-muted-dark max-w-md mb-10 text-base leading-relaxed">
+                Discover Timeless Elegance Elevate Your Style with Our Exquisite Jewelry Collection.
+            </p>
+<div class="flex space-x-4 mb-10">
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white dark:border-gray-700 shadow-md transform hover:scale-105 transition-transform duration-300">
+<img alt="Jewelry Detail 1" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTiv4SBGmZtQPZH-n39x0M9g3SxwWUia7MtvCm9kJVLXuWCAd_n8ufG6i41LIaiSVfV9-qKCVbV6W5BNADjr2puzqO_knNTLiQyQkYPwrSTKAmRcWwDDrf9bn5S7iNfjOP6nUF83dPymnhGu-boonyfucoR8sPneyZ0yMM0_cBUevXDO89G_4rXFzBcBxZItOxYGjmgR_hxSzSD-1kmV3RCKdm-6Es0YT2H5iLRhH3728QtqOlx1h4nnPMkTW-K7esRRu6px2DV1k"/>
+</div>
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white dark:border-gray-700 shadow-md transform hover:scale-105 transition-transform duration-300">
+<img alt="Jewelry Detail 2" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB3wi4Yf_AUl4G4Ip9669eL_1-jVdliPkE2F7p0XOk1UYeS8riy7wKazB7OGBSu4aujn07JleU4UCK0scM66Kh-u3WINrSTqnqOFjbkx0KknacHTqQal-1-JN1rtoysNGc3Gz8k8UUBOLP8q8TMadsy6aXPKWJKSdcKaIkOgW9SYKddZPlblbg01P-lDgYHezCopj3MW_SDIOO59a04WzmJYcC6dZ8Dsak5X7O05X76mEpiPWeX5dmQli38py-kdHl0tV4R3DAN9LQ"/>
+</div>
+<div class="w-16 h-16 rounded-full overflow-hidden border-2 border-white dark:border-gray-700 shadow-md transform hover:scale-105 transition-transform duration-300">
+<img alt="Jewelry Detail 3" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcpWDjp7SizdNnhL0cvCUCCVAShZW6oaW41MvcSsqMSYX4tJ534O6R8mc9LumHfWLCsXCJQlALQ9roHD78EZT-qohsKlq1Kr5p_XT_q-O72vA2okebkVgHHjhRef6UNi1xm-vKcZThiqDLEqfTwp3xm3px2hiGoAc-KvnEa_4eVl7pSnZDrIh6GavOruKC54uqze2ZEFZOyjy_A70OiO_p4Q4tBLhQKMfKVMQeQR39ciF8gqLpY426qv3cRrJm4gfEGXr3tRPWrbs"/>
+</div>
+</div>
+<a class="inline-flex items-center text-sm font-bold tracking-wide uppercase text-text-main-light dark:text-text-main-dark border-b border-text-main-light dark:border-text-main-dark pb-1 hover:text-primary hover:border-primary transition-all group" href="#">
+                Shop Now 
+                <span class="material-icons-outlined ml-2 text-base transform group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</a>
+</div>
+<div class="relative flex justify-center lg:justify-end">
+<div class="absolute top-10 left-0 lg:-left-12 z-20 flex items-center space-x-2">
+<div class="h-px w-12 bg-gray-400"></div>
+<span class="text-xs uppercase tracking-widest text-text-muted-light dark:text-text-muted-dark font-semibold">Play Video</span>
+</div>
+<div class="relative w-full max-w-md aspect-[4/5] rounded-t-full border border-gray-300 dark:border-gray-700 p-3 bg-white/30 dark:bg-black/20 backdrop-blur-sm">
+<div class="w-full h-full rounded-t-full overflow-hidden relative">
+<img alt="Model wearing luxury necklace" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkQGdIDH4iT3cdaxRkezD24bczvhNyheJ8S7eKxAgkECY0hdlGHNm5GuF4ILKeZbEETCIKCmQrmDw9njVmgFuX7KjXLbzlOkzkidex7J20Me0RDdvol1zVyT6qQB1gcovDhjrM9d6htXqhXZOtC3W3jVk5vUefaVimJyuGFZ24aI4KrT1aBSQ4QE3vOnMdrtfLSK48_Eq1LR_U6uIMn53U0DCMoEycmmhiJ2Wc1dUfBYSvroFCa_rPCcSCvYRVkfFaKrwaWkfSUNI"/>
+<button class="absolute top-16 left-8 bg-white text-primary rounded-full p-3 shadow-lg hover:scale-110 transition-transform duration-300">
+<span class="material-icons-outlined text-2xl">play_arrow</span>
+</button>
+<div class="absolute top-4 right-12 text-white text-2xl animate-spin-slow">✦</div>
+</div>
+</div>
+</div>
+</header>
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-16 md:py-24">
+<div class="flex justify-between items-end mb-12">
+<h2 class="font-display text-3xl md:text-4xl text-text-main-light dark:text-text-main-dark">Shop by Category</h2>
+<div class="flex space-x-2">
+<button class="h-10 w-10 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all">
+<span class="material-icons-outlined text-sm">arrow_back</span>
+</button>
+<button class="h-10 w-10 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all">
+<span class="material-icons-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
+<div class="group cursor-pointer">
+<div class="w-full aspect-square rounded-full overflow-hidden mb-4 border border-transparent group-hover:border-primary transition-all p-1">
+<div class="w-full h-full rounded-full overflow-hidden">
+<img alt="Earrings" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBcyS9zkykoTXDqDlUvcZm-86ue13VbNQYD9M1qd7_bTHr6-crSIjOX4d3PS6NhuMrqMPmIDTkHNxlOLFRIBBip9dQ9nAxD2TZTsTDndw1o3DENMbop0ocH4LKvcbOjjwZ01NO54KfWnVKrReNj2R2xiIsd9e5TWoM9-rBi3yGtKi1oIZr3-ciA9SzBKSjFM-nSOsRSGY5r2UbAUi1kwTiIER-MCo7FCKLvLykDRQ_CBTlPeZ9f9vu66WF4X66qjk96JzGyXQve8hc"/>
+</div>
+</div>
+<h3 class="font-display text-lg uppercase tracking-wide">Earrings</h3>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1">45 Products</p>
+</div>
+<div class="group cursor-pointer">
+<div class="w-full aspect-square rounded-full overflow-hidden mb-4 border border-transparent group-hover:border-primary transition-all p-1">
+<div class="w-full h-full rounded-full overflow-hidden">
+<img alt="Bracelet" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCaZw_FF3QD4_WmfqyYhqblM4sRZD4Y02F3wPfuEiALUPhL9_NwVioOXlaRkG_ryY4ZHHQKXzcgdHpH6glfXxhydpXvKW4-6596FDSAPW3BLs_H_GRJMnKo50uS1fh4jmwniXu3lB1-ZzJx_UeYIaeNi7Gf4X-rMuaevFUAZg60QtCnSTL58HM_Z21v5Yzpq7dgvSHhReEFcQWYR80JnxcnpowIv41SVfeIYzXu65XCPzttCsPztziLJpLg_gk7HS7yjewna-VqRbk"/>
+</div>
+</div>
+<h3 class="font-display text-lg uppercase tracking-wide">Bracelet</h3>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1">30 Products</p>
+</div>
+<div class="group cursor-pointer">
+<div class="w-full aspect-square rounded-full overflow-hidden mb-4 border border-transparent group-hover:border-primary transition-all p-1">
+<div class="w-full h-full rounded-full overflow-hidden">
+<img alt="Necklace" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkEKfQhDQBxWOoXWEvZOuwqokAPE8qDmjFpQF-lCNCTZ37MYr6FYkdjoOPsGn_HKRlHZLQM8EPua9okbVFIBLzZVNYJK8weNVaC3dChaaLvSY4zb93mn5y7lFsyNDFQulbvkmH5ozdXFjCxngcEs7cX8MuUj0sCJHAUVWefRyjYzq8ReYuT-2yHmOxPpiXA0UbKT1Ppf-JDJ0zUatZRqdI3DHgGIoT7ZNsE4xqT5X_oO9n6ua5PisR-1tDS0lWDqUlEBNt-OBhrIM"/>
+</div>
+</div>
+<h3 class="font-display text-lg uppercase tracking-wide">Necklace</h3>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1">56 Products</p>
+</div>
+<div class="group cursor-pointer">
+<div class="w-full aspect-square rounded-full overflow-hidden mb-4 border border-transparent group-hover:border-primary transition-all p-1">
+<div class="w-full h-full rounded-full overflow-hidden">
+<img alt="Rings" class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCESaFW-i2Y8kCw3hsjFV5QXBxvDuy1NI68iNcSm7sArxBqzoY_ZT398lqcXhOhBWwHRqMuN2PZZTHNU9m9cVSNiicu5j1t_SxPSDcyhpouy3eCPgSGDHFJR49nhVbeUIGlk23URnn6M4b7p5ygraXXCzq7QHeIOySWDFPVOPGW4uEC4Dv280bsiKRLuA_14oP79HCRyQFIFxrxqnjTeT_EJzZRiroW1hsxVzmQ9I31I4bdYIeeo0kGvGnVPrHe78yEsGqcnJN7AJU"/>
+</div>
+</div>
+<h3 class="font-display text-lg uppercase tracking-wide">Rings</h3>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mt-1">30 Products</p>
+</div>
+</div>
+<div class="text-center mt-12">
+<button class="px-8 py-3 border border-gray-300 dark:border-gray-600 text-sm font-medium uppercase tracking-wider hover:bg-primary hover:text-white hover:border-primary transition-all">View All Categories</button>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-16">
+<div class="flex justify-between items-center mb-10">
+<div>
+<h2 class="font-display text-3xl md:text-4xl text-text-main-light dark:text-text-main-dark mb-2">Bestseller Products</h2>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm">Discover our bestselling products, each a testament to quality and style.</p>
+</div>
+<div class="hidden md:flex space-x-2">
+<button class="h-10 w-10 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all">
+<span class="material-icons-outlined text-sm">arrow_back</span>
+</button>
+<button class="h-10 w-10 rounded-full border border-gray-300 dark:border-gray-600 flex items-center justify-center hover:bg-primary hover:text-white hover:border-primary transition-all">
+<span class="material-icons-outlined text-sm">arrow_forward</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="group">
+<div class="relative bg-[#f5f0e6] dark:bg-[#1a1a1a] rounded-lg overflow-hidden mb-4 p-8 flex items-center justify-center h-80 transition-colors duration-300">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 z-10">
+<span class="material-icons-outlined">favorite_border</span>
+</button>
+<img alt="Huggie Earrings" class="max-h-full max-w-full object-contain mix-blend-multiply dark:mix-blend-normal transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDeN_fmB-NJtiD0CkQ8HLvy5Lu9i0BWmkzj-dS7IdYOhVfJJAUQPLwoPdSAqKs3cP_VF9hPbpLZrvdMLJQmUdocBH5rZwTKggLVls5RICP9sHoEFlBMmdB7QACvw3ibKyC2MR7Y3AfFeqb_5rkH0UJuXyw5n_q2oSn4qmbLqQMCpAD_YLhIJJSl4iRLWQIlA0sTk370HqMakdgXJKt0yDatQ43kEYSSUZma-fbSeQUQX6lJcBxukHbEmITuOEGa-Ps8tOrp6g6nV_U"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-display text-lg text-text-main-light dark:text-text-main-dark">Huggie Earrings</h3>
+<div class="flex items-center space-x-2 mt-1">
+<span class="text-primary font-bold">$1450</span>
+<span class="text-text-muted-light dark:text-text-muted-dark line-through text-sm">$1800</span>
+</div>
+</div>
+<div class="flex items-center text-xs text-yellow-500 mt-1">
+<span class="material-icons text-sm">star</span>
+<span class="ml-1 text-text-muted-light dark:text-text-muted-dark">4.5</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-[#f5f0e6] dark:bg-[#1a1a1a] rounded-lg overflow-hidden mb-4 p-8 flex items-center justify-center h-80 transition-colors duration-300">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 z-10">
+<span class="material-icons-outlined">favorite_border</span>
+</button>
+<img alt="Chain Monogram Necklace" class="max-h-full max-w-full object-contain mix-blend-multiply dark:mix-blend-normal transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnNIcf14dzow44hhgtWLiR0fq_z2eaZoe8YVtOIO98jQX5b4t8thZxZ-wg1QqeVa909SVsYhFUZMY6HWR9isu3szgkrHGhKIqJGwQV9VRGek1Ml7EX_iMRUYPK8bjyyF45TseFKCqJdohwDrGYJEsYHti6hYaUpSUVfgz9Cj5wNhJFaZMMhN0gz60phpjtMZ-s-FLXZVFu5h-PZmsRKDKyP1BoASuqE0_bWyyTnsjtnIa67nLo1yhqFvFGY0MukGd11QJxq-unv4Y"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-display text-lg text-text-main-light dark:text-text-main-dark">Chain Monogram Necklace</h3>
+<div class="flex items-center space-x-2 mt-1">
+<span class="text-primary font-bold">$1450</span>
+<span class="text-text-muted-light dark:text-text-muted-dark line-through text-sm">$1600</span>
+</div>
+</div>
+<div class="flex items-center text-xs text-yellow-500 mt-1">
+<span class="material-icons text-sm">star</span>
+<span class="ml-1 text-text-muted-light dark:text-text-muted-dark">4.9</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-[#f5f0e6] dark:bg-[#1a1a1a] rounded-lg overflow-hidden mb-4 p-8 flex items-center justify-center h-80 transition-colors duration-300">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 z-10">
+<span class="material-icons-outlined">favorite_border</span>
+</button>
+<img alt="Pearl Bow Earrings" class="max-h-full max-w-full object-contain mix-blend-multiply dark:mix-blend-normal transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAR8di1lrueoq_2yu682FeI7eTEqJYf89HSuPmbmI2uoH1czMRRw--f-sRE0jEuf0meZQvRcUT6ksbdlLtxtiEyQrDeKrnaQlE9QLn12_evzCo-Zsq6ENd9p3l9tlcTrJ20mJ85By09UkBTNV2jk6d-gO-MoiPn1hkdXj5xR_6RSZwllaMbiki2i7h_dz5V5MIkj4YrLoqnkLIo9IjgbmgSILq8E8bZBl1ek1PhqlxQgwfEyAteIfBtyLR3vI9nHEFyT0XhfFRNP0A"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-display text-lg text-text-main-light dark:text-text-main-dark">Pearl Bow Earrings</h3>
+<div class="flex items-center space-x-2 mt-1">
+<span class="text-primary font-bold">$850</span>
+<span class="text-text-muted-light dark:text-text-muted-dark line-through text-sm">$950</span>
+</div>
+</div>
+<div class="flex items-center text-xs text-yellow-500 mt-1">
+<span class="material-icons text-sm">star</span>
+<span class="ml-1 text-text-muted-light dark:text-text-muted-dark">4.9</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-[#f5f0e6] dark:bg-[#1a1a1a] rounded-lg overflow-hidden mb-4 p-8 flex items-center justify-center h-80 transition-colors duration-300">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 z-10">
+<span class="material-icons-outlined">favorite_border</span>
+</button>
+<img alt="Stitchband Bracelet" class="max-h-full max-w-full object-contain mix-blend-multiply dark:mix-blend-normal transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDGZYBpH4_xWISLt0fX6U7xxp_Z_5G4EywzuCCPqsv7o0Ww8K4VpceTUXsjrlpQvJRrXSIytE03nhzHEByR5dY0oGk1HxJXZ5HtISTjJHr0_G2_fFI8gwum7DWUyz1e1ilIIQdpv0PE0zTS4j_sI5bvfspemF9GLE26sOeNKtJtej786908Wzy_sIUtXz4MrEs8WWDp5ZfBcgVtpjqMbMKHcDoQq23S7hKlJsgJ0gl3OXT3hNAOtoxnw6j01QAd3OAgl3lSeEqZsW8"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-display text-lg text-text-main-light dark:text-text-main-dark">Stitchband Bracelet</h3>
+<div class="flex items-center space-x-2 mt-1">
+<span class="text-primary font-bold">$1150</span>
+</div>
+</div>
+<div class="flex items-center text-xs text-yellow-500 mt-1">
+<span class="material-icons text-sm">star</span>
+<span class="ml-1 text-text-muted-light dark:text-text-muted-dark">4.6</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-[#f5f0e6] dark:bg-[#1a1a1a] rounded-lg overflow-hidden mb-4 p-8 flex items-center justify-center h-80 transition-colors duration-300">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 z-10">
+<span class="material-icons-outlined">favorite_border</span>
+</button>
+<img alt="Flower Collar Necklace" class="max-h-full max-w-full object-contain mix-blend-multiply dark:mix-blend-normal transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-SmWoBcOhgyPLFa4u58VEdSMw8vfic75g5XvO0O4CunLOptrfchffLvCXdsyfX8_DZE2v4ljTsDV62GXjXxbk_ahy7MTvJNbGUaOXj26qq5IUTmEQbjhzxcoRM7kRdCNmHHUodNQmVL3t6uBnpf-5RNOpd9ucqeIW1c6naiy92htU7eWsR-kgzltNSkWIifLuZdFFreCwjupRASQFJJtSPMPX65M2ztJ1meakOAE0Zucn3w32riFtI-S7rx6nllm7BUwy0tY34U8"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-display text-lg text-text-main-light dark:text-text-main-dark">Flower Collar Necklace</h3>
+<div class="flex items-center space-x-2 mt-1">
+<span class="text-primary font-bold">$1330</span>
+<span class="text-text-muted-light dark:text-text-muted-dark line-through text-sm">$1500</span>
+</div>
+</div>
+<div class="flex items-center text-xs text-yellow-500 mt-1">
+<span class="material-icons text-sm">star</span>
+<span class="ml-1 text-text-muted-light dark:text-text-muted-dark">4.9</span>
+</div>
+</div>
+</div>
+<div class="group">
+<div class="relative bg-[#f5f0e6] dark:bg-[#1a1a1a] rounded-lg overflow-hidden mb-4 p-8 flex items-center justify-center h-80 transition-colors duration-300">
+<button class="absolute top-4 right-4 text-gray-400 hover:text-red-500 z-10">
+<span class="material-icons-outlined">favorite_border</span>
+</button>
+<img alt="Glass Stone Bracelet" class="max-h-full max-w-full object-contain mix-blend-multiply dark:mix-blend-normal transform group-hover:scale-105 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTHZF8ZcZRki-1s8AzLPujpwG5_WBxYy8SFwxCrPun_buroKgAo0bRaOGOkxi0pbXFPnZ6TklMJm3MW6qjlCogsEiC7846tKF8xGqI1mX59qgVFIrdHZ5wNEtp3767kgxJeuySivn_bPNjoPD-cOSsQq1wC6AUVkiWWzU11Tcvi6N1UVllDocPxDYxjDdeu-MSBo8gXTIW7itwgvAncMLJTlJEad9XlXz-3omZCnpoTNxcl1Che3yWXsTmWuX3m_Pz7S68eSiWJWY"/>
+</div>
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-display text-lg text-text-main-light dark:text-text-main-dark">Glass Stone Bracelet</h3>
+<div class="flex items-center space-x-2 mt-1">
+<span class="text-primary font-bold">$1250</span>
+<span class="text-text-muted-light dark:text-text-muted-dark line-through text-sm">$1350</span>
+</div>
+</div>
+<div class="flex items-center text-xs text-yellow-500 mt-1">
+<span class="material-icons text-sm">star</span>
+<span class="ml-1 text-text-muted-light dark:text-text-muted-dark">4.9</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-xl">
+<div class="relative h-96 lg:h-auto overflow-hidden">
+<img alt="Close up jewelry model" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCGw-hwtsqHCJS7X1uYc2soJRtbBR9KVh2qDa5Y2sQ1wfP1vdG5HqDDtkTi679z4CQmSZxzrb9Dv6k6w245rwobXgCkiV83nSAGbG-1Pv3UonrVzyTupqcYiAPLnxN_gtlc6gWPqXfc8YDpFMiHRZj7GS-PHrwvwqaArcV4zZbgrGEw4q3JBx2nZv4krZaGp1AqMXTBchgMGF3oloSWb0-JP-jYYN8ThX0QEu5_HCTz7itA07kkdQsgL6-wTLStV5AReQc4TnWajJY"/>
+</div>
+<div class="bg-[#fcf7ef] dark:bg-[#252525] p-12 lg:p-20 flex flex-col justify-center">
+<h2 class="font-display text-3xl md:text-4xl text-text-main-light dark:text-text-main-dark mb-6 leading-tight">Creates Lasting Memories of Each Occasion</h2>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm mb-8 leading-relaxed">
+                It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum.
+            </p>
+<div>
+<a class="inline-flex items-center px-6 py-3 border border-gray-400 dark:border-gray-500 text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-white hover:border-primary transition-all" href="#">
+                    Read More 
+                    <span class="material-icons-outlined text-sm ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+</section>
+<section class="max-w-7xl mx-auto px-6 md:px-12 py-16 grid grid-cols-1 lg:grid-cols-2 gap-0 overflow-hidden rounded-xl">
+<div class="bg-[#fcf7ef] dark:bg-[#252525] p-12 lg:p-20 flex flex-col justify-center order-2 lg:order-1">
+<h2 class="font-display text-3xl md:text-4xl text-text-main-light dark:text-text-main-dark mb-6 leading-tight">Craft and Designer</h2>
+<p class="text-text-muted-light dark:text-text-muted-dark text-sm mb-8 leading-relaxed">
+               Distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.
+            </p>
+<div>
+<a class="inline-flex items-center px-6 py-3 border border-gray-400 dark:border-gray-500 text-xs font-bold uppercase tracking-widest hover:bg-primary hover:text-white hover:border-primary transition-all" href="#">
+                    Read More 
+                    <span class="material-icons-outlined text-sm ml-2">arrow_forward</span>
+</a>
+</div>
+</div>
+<div class="relative h-96 lg:h-auto overflow-hidden order-1 lg:order-2">
+<img alt="Jewelry model portrait" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrLdaS8SdLdyU-jemGs4R9g-U4jKihuObDTqGLksuV7ubbu33ydEM6YhFVJsVr4BoPug7r31tLSv4TLBRqvbvVqSVdj68U0j0VBSOJ6co47A_4qzCRtaLxOSqjpaMHD5oAjCcw0sxlDe8jcrqTfVnW-FNVILZvYk76Ul1r2AB3P_VnecwZ1XUY_ah7890W5-sPYL2z3NJtcWXwBbOozqxtG4kMoveHvK_113w0HWXgwATPpc30OTXw1gs9t1WQVETJHbxvax1LrRk"/>
+</div>
+</section>
+<footer class="bg-white dark:bg-[#0a0a0a] py-12 md:py-16 border-t border-gray-100 dark:border-gray-800">
+<div class="max-w-7xl mx-auto px-6 md:px-12 grid grid-cols-1 md:grid-cols-4 gap-8">
+<div class="col-span-1 md:col-span-1">
+<div class="text-2xl font-display font-bold tracking-tight mb-4">Jewelley</div>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark leading-relaxed">
+                    Crafting memories, one piece at a time. Experience luxury in every detail.
+                </p>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-wider mb-4">Shop</h4>
+<ul class="space-y-2 text-xs text-text-muted-light dark:text-text-muted-dark">
+<li><a class="hover:text-primary transition-colors" href="#">Earrings</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Necklace</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Bracelets</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Rings</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-wider mb-4">About Us</h4>
+<ul class="space-y-2 text-xs text-text-muted-light dark:text-text-muted-dark">
+<li><a class="hover:text-primary transition-colors" href="#">Our Story</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Designers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Contact</a></li>
+</ul>
+</div>
+<div>
+<h4 class="font-bold text-sm uppercase tracking-wider mb-4">Newsletter</h4>
+<p class="text-xs text-text-muted-light dark:text-text-muted-dark mb-4">Subscribe for latest updates and offers.</p>
+<div class="flex">
+<input class="w-full px-3 py-2 text-xs border border-gray-300 dark:border-gray-700 dark:bg-gray-800 rounded-l-sm focus:outline-none focus:border-primary" placeholder="Your email" type="email"/>
+<button class="bg-primary text-white px-4 py-2 text-xs rounded-r-sm hover:bg-primary-hover transition-colors">Join</button>
+</div>
+</div>
+</div>
+<div class="max-w-7xl mx-auto px-6 md:px-12 mt-12 pt-8 border-t border-gray-100 dark:border-gray-800 text-center text-xs text-text-muted-light dark:text-text-muted-dark">
+            © 2023 Jewelley. All Rights Reserved.
+        </div>
+</footer>
+
+</body></html>

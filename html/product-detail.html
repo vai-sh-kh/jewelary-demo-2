@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Golden Legacy - The Imperial Topaz Ring</title>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Google Fonts: Manrope -->
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Theme Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#ec9c13",
+                        "background-light": "#f8f7f6",
+                        "background-dark": "#221b10",
+                        "surface-dark": "#2d2416",
+                        "border-dark": "#483a23",
+                    },
+                    fontFamily: {
+                        "display": ["Manrope", "sans-serif"]
+                    },
+                    borderRadius: {
+                        "DEFAULT": "0.125rem", 
+                        "lg": "0.25rem", 
+                        "xl": "0.5rem", 
+                        "full": "0.75rem",
+                        "none": "0px"
+                    },
+                },
+            },
+        }
+    </script>
+<style>/* Custom scrollbar for gallery if needed, though we are using page scroll */
+.hide-scrollbar::-webkit-scrollbar {
+    display: none
+    }
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none
+    }
+/* Custom styles for select styling override */
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBUCkcmCvQjckXLTlNB0cXegqeuKhEg-4559kuYbDVK2mLv2vC1VU4-_qCyx630qHIIx6Egz-78bJ7ltcd1_JS01lLEfYPMAczIBd2KVZ6gPxptmwxdshruL-RJ0No0filt4ro2bq2LV_RDwt71arnbaKudlV3g23FtMxlHtLw1RDk5vsXkN2TwUx3RCj2Ztz-QYUG8pkYVCI0aAN0AjuqT71y-6FE-czrDzgULYYTLrJOYYoTAGSlaW6uYY1d1QQAkSBvQ6KA1nrA);
+    background-position: right 0.5rem center;
+    background-repeat: no-repeat;
+    background-size: 1.5em 1.5em
+    }</style>
+</head>
+<body class="bg-background-light dark:bg-background-dark font-display text-gray-900 dark:text-white antialiased overflow-x-hidden">
+<div class="flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="sticky top-0 z-50 w-full border-b border-solid border-[#483a23] bg-[#221c11] px-4 md:px-10 py-3">
+<div class="flex items-center justify-between whitespace-nowrap">
+<div class="flex items-center gap-8">
+<div class="flex items-center gap-4 text-white">
+<div class="size-6 text-primary">
+<!-- Using a diamond symbol instead of custom SVG for simplicity within instructions -->
+<span class="material-symbols-outlined !text-[24px]">diamond</span>
+</div>
+<h2 class="text-white text-lg font-bold leading-tight tracking-[-0.015em]">Golden Legacy</h2>
+</div>
+<div class="hidden md:flex items-center gap-9">
+<a class="text-white hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Collections</a>
+<a class="text-white hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">New Arrivals</a>
+<a class="text-white hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Gifts</a>
+<a class="text-white hover:text-primary transition-colors text-sm font-medium leading-normal" href="#">Maison</a>
+</div>
+</div>
+<div class="flex flex-1 justify-end gap-6 md:gap-8">
+<label class="hidden md:flex flex-col min-w-40 !h-10 max-w-64">
+<div class="flex w-full flex-1 items-stretch rounded h-full">
+<div class="text-[#c9b592] flex border-none bg-[#483a23] items-center justify-center pl-4 rounded-l border-r-0">
+<span class="material-symbols-outlined">search</span>
+</div>
+<input class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded text-white focus:outline-0 focus:ring-0 border-none bg-[#483a23] focus:border-none h-full placeholder:text-[#c9b592] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal" placeholder="Search" value=""/>
+</div>
+</label>
+<div class="flex gap-2">
+<button class="flex items-center justify-center overflow-hidden rounded h-10 bg-[#483a23] hover:bg-[#5a492c] transition-colors text-white gap-2 min-w-10 px-2.5">
+<span class="material-symbols-outlined text-xl">shopping_bag</span>
+</button>
+<button class="flex items-center justify-center overflow-hidden rounded h-10 bg-[#483a23] hover:bg-[#5a492c] transition-colors text-white gap-2 min-w-10 px-2.5">
+<span class="material-symbols-outlined text-xl">person</span>
+</button>
+</div>
+</div>
+</div>
+</header>
+<!-- Breadcrumbs -->
+<div class="w-full px-4 md:px-10 py-4 md:py-6 border-b border-[#2d2416]">
+<div class="flex flex-wrap gap-2 text-sm md:text-base">
+<a class="text-[#c9b592] hover:text-primary transition-colors font-medium leading-normal" href="#">Home</a>
+<span class="text-[#c9b592] font-medium leading-normal">/</span>
+<a class="text-[#c9b592] hover:text-primary transition-colors font-medium leading-normal" href="#">Rings</a>
+<span class="text-[#c9b592] font-medium leading-normal">/</span>
+<span class="text-white font-medium leading-normal">Imperial Topaz Ring</span>
+</div>
+</div>
+<!-- Main Product Section: Split Screen -->
+<main class="flex-grow w-full max-w-[1600px] mx-auto px-4 md:px-10 py-8 md:py-12">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-16 items-start">
+<!-- Left: Gallery (60% width roughly on large screens) -->
+<div class="lg:col-span-7 w-full flex flex-col gap-4 md:gap-6">
+<!-- Main Hero Image -->
+<div class="w-full aspect-[4/5] md:aspect-square lg:aspect-[4/3] relative rounded overflow-hidden group">
+<div class="absolute inset-0 bg-cover bg-center transition-transform duration-700 group-hover:scale-105" data-alt="Close up of a luxury gold diamond ring on a dark reflective surface" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDx9uDpqOf5ZYOioYIUZYx6WY8R5PPK_r3Lzt8BjjYE9x4HzIvGeEfjPe7wp4AMBDNqFlOTf_XaH6LyysFTJAt7OVJoSL4Wly2UDLiiQxJADp3LrGwDeMnw34js0nxUh2diGYooGKqOOI-LHWEjxubwu2IasG42oTiqs7mm-uLW6RssGJuGOuCvgtJcQMvu0h2CsVWVaXhgB9uEHoIjQkDfpBWI-92TZA0JWbC28vzNjKSz-HdRl7yDfxDTG4IXONYAd7gR1fo8ugs");'>
+</div>
+<button class="absolute bottom-4 right-4 bg-background-dark/80 text-white p-2 rounded hover:bg-primary hover:text-black transition-colors">
+<span class="material-symbols-outlined">zoom_in</span>
+</button>
+</div>
+<!-- Secondary Grid -->
+<div class="grid grid-cols-2 gap-4 md:gap-6">
+<div class="w-full aspect-square relative rounded overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="A woman elegantly wearing a gold ring on her hand" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBP7JE9p0wkYjeIC6Vo_rJSTOSd87dLpuNReUeBDE2sD5QPSm5-E9c-KFoYcy6FqPUHzY5ZlHvMOGSz6p5AgzLrJuGP1cIReQRs0ge5sbOyCvuUnHBVs0oQ_PoKSy9W95Z5UzAiGCUE2u82Da2cgcUMyzSYbhGmVpdW_YauNyGGAMZSz-jmLrzBluoSknBKgEqcCvJ6WqU-yKU6s7e6R_TA6-DXWDz1jYDf_pHOWwEeDQ7QtQJvIkhPWDXXotWq2rcXfUmxbAo_zK4");'>
+</div>
+</div>
+<div class="w-full aspect-square relative rounded overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Macro detail shot of the ring setting and diamond clarity" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuABtPdXvkksgRKVU0s7m29h5_RfXbLiMPsg98_s3tdqvPsw_NKFHDA1ay20A3_BpWaidr4JQlOZ8VlkW8LPa7nX4Gt8Sto8vN35VkTZynmtl9WFW0WBY9kWE7JhTHRcTsNYr9wTMEMehzNlImEEgFLlWxsC7OZH5Wxwi-9bBkXBBdE7HUJB1mAYpHjF7TT_Blimq5qE_ax7x8LtscXoBwzM9lCcKDEZSjTF2x3EPr2jOxnT6Pmc8X8jB7ODAnfTcYH9iT1tzUaZNTE");'>
+</div>
+</div>
+</div>
+<!-- Full Width Editorial Image -->
+<div class="w-full aspect-video md:aspect-[21/9] relative rounded overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center bg-[url('https://images.unsplash.com/photo-1573408301185-a1d31e66c547?q=80&amp;w=2070&amp;auto=format&amp;fit=crop')]" data-alt="Abstract golden light reflecting off jewelry textures in dark environment">
+</div>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/80 to-transparent"></div>
+<div class="absolute bottom-6 left-6 md:bottom-10 md:left-10 text-white max-w-md">
+<p class="font-display text-sm uppercase tracking-widest text-primary mb-2">Artistry</p>
+<p class="text-lg md:text-xl font-light opacity-90">Crafted with precision, designed for eternity.</p>
+</div>
+</div>
+</div>
+<!-- Right: Sticky Product Info (40% width roughly) -->
+<div class="lg:col-span-5 relative h-full">
+<div class="lg:sticky lg:top-24 flex flex-col gap-8 md:gap-10 pb-12">
+<!-- Header & Price -->
+<div class="border-b border-[#483a23] pb-6">
+<h1 class="text-white text-3xl md:text-4xl lg:text-5xl font-light leading-tight mb-4 tracking-tight">The Imperial Topaz Ring</h1>
+<p class="text-primary text-2xl md:text-3xl font-bold tracking-tight">$12,500</p>
+<p class="text-[#9ca3af] mt-4 text-base leading-relaxed font-light">
+                                An exquisite masterpiece featuring a rare 5-carat imperial topaz, haloed by brilliant-cut diamonds. Set in 18k recycled yellow gold, this piece embodies the timeless elegance of the Golden Legacy collection.
+                            </p>
+</div>
+<!-- Selectors -->
+<div class="flex flex-col gap-6">
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<label class="text-white text-sm font-bold uppercase tracking-wider">Metal</label>
+<span class="text-[#c9b592] text-xs cursor-pointer hover:text-white transition-colors">Material Guide</span>
+</div>
+<div class="grid grid-cols-3 gap-3">
+<button class="py-3 px-2 border border-primary bg-primary/20 text-white text-sm font-medium rounded-sm flex flex-col items-center gap-1">
+<span class="size-4 rounded-full bg-[#E6C200] block"></span>
+                                        18k Yellow
+                                    </button>
+<button class="py-3 px-2 border border-[#483a23] hover:border-[#c9b592] bg-transparent text-[#9ca3af] hover:text-white transition-colors text-sm font-medium rounded-sm flex flex-col items-center gap-1">
+<span class="size-4 rounded-full bg-[#E1E1E1] block"></span>
+                                        18k White
+                                    </button>
+<button class="py-3 px-2 border border-[#483a23] hover:border-[#c9b592] bg-transparent text-[#9ca3af] hover:text-white transition-colors text-sm font-medium rounded-sm flex flex-col items-center gap-1">
+<span class="size-4 rounded-full bg-[#E6A57E] block"></span>
+                                        18k Rose
+                                    </button>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-end">
+<label class="text-white text-sm font-bold uppercase tracking-wider">Ring Size</label>
+<span class="text-[#c9b592] text-xs cursor-pointer hover:text-white transition-colors">Size Guide</span>
+</div>
+<div class="relative">
+<select class="w-full bg-[#2d2416] border border-[#483a23] text-white py-3 pl-4 pr-10 rounded-sm focus:border-primary focus:ring-0 outline-none cursor-pointer">
+<option>US 4</option>
+<option>US 5</option>
+<option selected="">US 6 (Standard)</option>
+<option>US 7</option>
+<option>US 8</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-4">
+<button class="w-full bg-primary hover:bg-[#d68a0e] text-background-dark h-[56px] flex items-center justify-center gap-3 text-sm font-bold uppercase tracking-[0.1em] transition-all rounded-none px-6">
+<span>Add to Bag</span>
+<span class="material-symbols-outlined text-[18px]">arrow_forward</span>
+</button>
+<div class="flex items-center justify-center gap-6 mt-2">
+<button class="flex items-center gap-2 text-[#c9b592] hover:text-white text-xs uppercase tracking-wider font-medium transition-colors">
+<span class="material-symbols-outlined text-[18px]">favorite</span>
+                                    Wishlist
+                                </button>
+<button class="flex items-center gap-2 text-[#c9b592] hover:text-white text-xs uppercase tracking-wider font-medium transition-colors">
+<span class="material-symbols-outlined text-[18px]">share</span>
+                                    Share
+                                </button>
+</div>
+</div>
+<!-- Details Accordion -->
+<div class="border-t border-[#483a23] mt-4">
+<details class="group py-4 border-b border-[#483a23] cursor-pointer">
+<summary class="flex items-center justify-between font-bold text-white text-sm uppercase tracking-wider list-none">
+<span>Description &amp; Details</span>
+<span class="material-symbols-outlined transform group-open:rotate-180 transition-transform text-[#c9b592]">expand_more</span>
+</summary>
+<div class="pt-4 text-[#9ca3af] text-sm leading-relaxed">
+                                    Hand-selected Imperial Topaz from Brazil. VS1 clarity diamonds total 0.50ct. Hallmarked 18k gold. Each piece is unique and may vary slightly in color.
+                                </div>
+</details>
+<details class="group py-4 border-b border-[#483a23] cursor-pointer">
+<summary class="flex items-center justify-between font-bold text-white text-sm uppercase tracking-wider list-none">
+<span>Shipping &amp; Returns</span>
+<span class="material-symbols-outlined transform group-open:rotate-180 transition-transform text-[#c9b592]">expand_more</span>
+</summary>
+<div class="pt-4 text-[#9ca3af] text-sm leading-relaxed">
+                                    Complimentary insured shipping worldwide. Returns accepted within 30 days of delivery for unworn items in original packaging.
+                                </div>
+</details>
+<details class="group py-4 border-b border-[#483a23] cursor-pointer">
+<summary class="flex items-center justify-between font-bold text-white text-sm uppercase tracking-wider list-none">
+<span>Authenticity</span>
+<span class="material-symbols-outlined transform group-open:rotate-180 transition-transform text-[#c9b592]">expand_more</span>
+</summary>
+<div class="pt-4 text-[#9ca3af] text-sm leading-relaxed">
+                                    Includes a GIA certificate of authenticity and a Golden Legacy heritage booklet documenting the sourcing journey.
+                                </div>
+</details>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- Contextual Banner -->
+<section class="w-full relative h-[60vh] min-h-[500px] flex items-center justify-center overflow-hidden my-12">
+<div class="absolute inset-0 bg-cover bg-fixed bg-center" data-alt="Cinematic shot of a model wearing luxury jewelry in a golden hour setting" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7H9vTH0SWls37EpIceLDIb9ssiBYagemyX1yRJMYUaI392D0CSBVqt2OU0VJrWT78zIe6KJZulCWEOXhDtSpVFM6IO6p_lNTmxELmb6D5TdsDzuNpfPYqjt-Iqh-dBcx8Ii8crY-2XMNFwDq2ehf_P2SaBHDlGoiiC75aAEfuUBMG8iPi7GBQdN_xjNkRD_VVOaBX482rrcIfrHyQpUtsxlbzFpoSSmM_cEvbUW7nrnVw1O1cIalth8FipeH-XEzksWd0Ol0FG3o");'>
+</div>
+<div class="absolute inset-0 bg-black/40"></div>
+<div class="relative z-10 text-center px-4">
+<p class="text-primary uppercase tracking-[0.2em] text-sm mb-4 font-bold">The Collection</p>
+<h2 class="text-white text-4xl md:text-6xl font-light tracking-tight mb-8">Forged in Heritage</h2>
+<a class="inline-flex items-center justify-center px-8 py-3 border border-white text-white hover:bg-white hover:text-black transition-colors uppercase text-sm font-bold tracking-widest" href="#">
+                    Discover the Story
+                </a>
+</div>
+</section>
+<!-- Recommendations: "Completing the Set" -->
+<section class="w-full max-w-[1440px] mx-auto px-4 md:px-10 pb-24">
+<div class="flex items-center justify-between mb-10">
+<h3 class="text-white text-2xl md:text-3xl font-light">Completing the Set</h3>
+<a class="text-[#c9b592] hover:text-primary transition-colors text-sm font-bold uppercase tracking-wider" href="#">View All</a>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
+<!-- Card 1 -->
+<div class="group cursor-pointer">
+<div class="aspect-square w-full relative overflow-hidden bg-[#2d2416] mb-4">
+<img alt="Golden earrings with topaz gemstones" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Gold earrings with teardrop gemstones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCi3_28mMBwKaUkMSYaAMYpo8MmiO2bot_f9X9wBeDz4CTi5_VxSQuXqIvd4WNcriTiKcTN9kWCX1zlau35Uo2oZ9UABxKbiURymI6iTcQhAU4XP7XlGt9yPbugoB6aXG5svKNsJx3n8IEy5ok13o3M3cveU6NP7Y37_WYTdpdMl2tbaEbg-NXfTywgl_tOl_NOeVMeoqKN6bt1c1gHqfbqRYU27PsR4E_0Cn0SwyuIOyVRmdbD4aTfHtO47RhYPOgDx36O7Z_TdBk"/>
+<div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-white/90 p-2 rounded-full hover:bg-primary text-black">
+<span class="material-symbols-outlined text-[16px] block">favorite</span>
+</button>
+</div>
+</div>
+<div class="text-center">
+<h4 class="text-white text-lg font-medium mb-1 group-hover:text-primary transition-colors">Imperial Earrings</h4>
+<p class="text-[#9ca3af] text-sm">$8,900</p>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="group cursor-pointer">
+<div class="aspect-square w-full relative overflow-hidden bg-[#2d2416] mb-4">
+<img alt="Gold necklace pendant on dark background" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Gold pendant necklace with intricate detailing" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBdMvN4WfQ7rwVlZVvaBsNOGqMLjrf-VFnscEZ43cd-LqQ9GtvK9pgYspP2ua12aHDOisJng2p727pWRT2B5AVQIW5NoZ6L2kr52GmjWgG-t1am4sWCpYOh5BPcGhVzMWOV6B4JpqPBfGMuYMiA489lehapmZXTMoE2L7wVGrl1BXRp9XQyInwY68YmgEHEZLAhWjhe5v6LP8ki4qT87-kNdn4iSb5Ana_LV670Q8LCTcD425DPgAGgOq1V96JhtvNHT1NwjwlrPE"/>
+<div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-white/90 p-2 rounded-full hover:bg-primary text-black">
+<span class="material-symbols-outlined text-[16px] block">favorite</span>
+</button>
+</div>
+</div>
+<div class="text-center">
+<h4 class="text-white text-lg font-medium mb-1 group-hover:text-primary transition-colors">Heritage Pendant</h4>
+<p class="text-[#9ca3af] text-sm">$6,200</p>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="group cursor-pointer">
+<div class="aspect-square w-full relative overflow-hidden bg-[#2d2416] mb-4">
+<img alt="Stackable gold bracelets on wrist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Gold bangle bracelet with diamond accents" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARHI1q2fiuBqUR8jR7Og_VZWBA1C5ryVanaNFs18Bjx8zYBk4igWp6js6nlCGsWMRNmapVsegSpLuqw_Q-mZJK_FK6Qx1DIRIXJ7V6eXFyIN0pKVBB-Cj3zVWtNncfdQ4zjqtR07OFFaCF_tXkpJLyK8wju_CEAI5gFm8K8_PiXRAEiq2WwbWCCBC5LP_boiMgk3luRxb39A4AszbK6xtrUuaBbxyxjnlHPTK2RvlDxlu4oc30g3odROap29wvvMyue_aDtcOtuiU"/>
+<div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-white/90 p-2 rounded-full hover:bg-primary text-black">
+<span class="material-symbols-outlined text-[16px] block">favorite</span>
+</button>
+</div>
+</div>
+<div class="text-center">
+<h4 class="text-white text-lg font-medium mb-1 group-hover:text-primary transition-colors">Eternal Bangle</h4>
+<p class="text-[#9ca3af] text-sm">$14,500</p>
+</div>
+</div>
+<!-- Card 4 -->
+<div class="group cursor-pointer">
+<div class="aspect-square w-full relative overflow-hidden bg-[#2d2416] mb-4">
+<img alt="Simple gold band ring" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" data-alt="Minimalist gold band ring" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDlYJYF1qd5OiwQppaHSUfbBUbSE6MwK77sQnZyo03rd3FaJWE7nCpW7W4Ug8h0-AoeHVYulzoA6cdDjockLCz2ORn5VogsPW1Um0nzIro25Qpim4m4-PhlepGQhvDHMMFnty8VqPzQBxUpukdSF1epeo2lpfZUy9xIXQD8ZoWaAVmMc1OkIsrN7Dxvc8vovQsYdLmEzut8n0sKPNSMeG9e1x9D-0UcZgqqua5xAOLAepmfuAHoNaB7LNmepv-MiUIqbqJTo4cePSE"/>
+<div class="absolute top-3 right-3 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-white/90 p-2 rounded-full hover:bg-primary text-black">
+<span class="material-symbols-outlined text-[16px] block">favorite</span>
+</button>
+</div>
+</div>
+<div class="text-center">
+<h4 class="text-white text-lg font-medium mb-1 group-hover:text-primary transition-colors">Classic Band</h4>
+<p class="text-[#9ca3af] text-sm">$3,200</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-[#1a150d] border-t border-[#483a23] py-12 md:py-16">
+<div class="max-w-[1440px] mx-auto px-4 md:px-10">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12">
+<div class="col-span-1 md:col-span-1">
+<div class="flex items-center gap-2 text-white mb-6">
+<span class="material-symbols-outlined text-primary">diamond</span>
+<span class="text-lg font-bold">Golden Legacy</span>
+</div>
+<p class="text-[#9ca3af] text-sm leading-relaxed mb-6">
+                            Exquisite jewelry forged from the earth's most precious elements. A legacy of brilliance for the modern era.
+                        </p>
+<div class="flex gap-4">
+<a class="text-[#c9b592] hover:text-primary transition-colors" href="#"><span class="sr-only">Instagram</span>IG</a>
+<a class="text-[#c9b592] hover:text-primary transition-colors" href="#"><span class="sr-only">Facebook</span>FB</a>
+<a class="text-[#c9b592] hover:text-primary transition-colors" href="#"><span class="sr-only">Pinterest</span>PN</a>
+</div>
+</div>
+<div>
+<h5 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Customer Care</h5>
+<ul class="flex flex-col gap-3 text-sm text-[#9ca3af]">
+<li><a class="hover:text-primary transition-colors" href="#">Contact Us</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Shipping &amp; Returns</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Warranty</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">FAQ</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold uppercase tracking-wider text-sm mb-6">The House</h5>
+<ul class="flex flex-col gap-3 text-sm text-[#9ca3af]">
+<li><a class="hover:text-primary transition-colors" href="#">Our Heritage</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Sustainability</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Careers</a></li>
+<li><a class="hover:text-primary transition-colors" href="#">Press</a></li>
+</ul>
+</div>
+<div>
+<h5 class="text-white font-bold uppercase tracking-wider text-sm mb-6">Newsletter</h5>
+<p class="text-[#9ca3af] text-sm mb-4">Subscribe to receive updates, access to exclusive deals, and more.</p>
+<form class="flex border-b border-[#483a23] pb-2">
+<input class="bg-transparent border-none p-0 text-white placeholder:text-[#483a23] focus:ring-0 w-full" placeholder="Email address" type="email"/>
+<button class="text-primary hover:text-white uppercase text-xs font-bold" type="submit">Join</button>
+</form>
+</div>
+</div>
+<div class="flex flex-col md:flex-row justify-between items-center mt-12 pt-8 border-t border-[#2d2416] text-xs text-[#5a492c]">
+<p>© 2023 Golden Legacy. All rights reserved.</p>
+<div class="flex gap-6 mt-4 md:mt-0">
+<a class="hover:text-[#c9b592]" href="#">Privacy Policy</a>
+<a class="hover:text-[#c9b592]" href="#">Terms of Service</a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+</body></html>
