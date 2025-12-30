@@ -1,6 +1,21 @@
+"use client";
+
 import Link from "next/link";
+import { usePathname } from "next/navigation";
+import { useState } from "react";
+import SearchBar from "./SearchBar";
 
 export default function Navigation() {
+  const pathname = usePathname();
+  const [isSearchOpen, setIsSearchOpen] = useState(false);
+
+  const navLinks = [
+    { href: "/", label: "Home" },
+    { href: "/about", label: "Collection" },
+    { href: "/products", label: "Products" },
+    { href: "/gifts", label: "Gifts" },
+  ];
+
   return (
     <nav className="w-full py-4 px-4 sm:py-6 sm:px-8 flex justify-between items-center max-w-7xl mx-auto">
       <Link
@@ -10,30 +25,23 @@ export default function Navigation() {
         Jewelley
       </Link>
       <div className="hidden md:flex space-x-6 lg:space-x-10 text-sm font-medium text-text-muted-light dark:text-text-muted-dark">
-        <Link
-          href="/"
-          className="hover:text-primary dark:hover:text-white transition-colors"
-        >
-          Home
-        </Link>
-        <Link
-          href="/about"
-          className="hover:text-primary dark:hover:text-white transition-colors"
-        >
-          Collection
-        </Link>
-        <Link
-          href="/products"
-          className="hover:text-primary dark:hover:text-white transition-colors"
-        >
-          Products
-        </Link>
-        <Link
-          href="/gifts"
-          className="hover:text-primary dark:hover:text-white transition-colors"
-        >
-          Gifts
-        </Link>
+        {navLinks.map((link) => {
+          const isActive = pathname === link.href;
+          return (
+            <Link
+              key={link.href}
+              href={link.href}
+              className="relative group hover:text-primary dark:hover:text-white transition-colors duration-300 pb-1"
+            >
+              <span className="relative z-10 inline-block">{link.label}</span>
+              <span
+                className={`absolute bottom-0 left-0 h-[2px] bg-current transition-all duration-300 ease-in-out ${
+                  isActive ? "w-full" : "w-0 group-hover:w-full"
+                }`}
+              />
+            </Link>
+          );
+        })}
       </div>
       <div className="flex items-center space-x-2 sm:space-x-3 md:space-x-5">
         <button className="md:hidden text-text-main-light dark:text-text-main-dark hover:text-primary transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center">
@@ -51,7 +59,10 @@ export default function Navigation() {
             />
           </svg>
         </button>
-        <button className="text-text-main-light dark:text-text-main-dark hover:text-primary transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center">
+        <button
+          onClick={() => setIsSearchOpen(true)}
+          className="text-text-main-light dark:text-text-main-dark hover:text-primary transition-colors min-w-[44px] min-h-[44px] flex items-center justify-center"
+        >
           <svg
             className="w-5 h-5 sm:w-6 sm:h-6"
             fill="none"
@@ -104,6 +115,7 @@ export default function Navigation() {
           Login
         </Link>
       </div>
+      <SearchBar isOpen={isSearchOpen} onClose={() => setIsSearchOpen(false)} />
     </nav>
   );
 }

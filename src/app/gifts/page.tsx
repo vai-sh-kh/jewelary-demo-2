@@ -10,89 +10,8 @@ export default function GiftsPage() {
     <div className="min-h-screen bg-background-light dark:bg-background-dark">
       <Navigation />
 
-      {/* Hero Section */}
-      <section className="relative h-[60vh] sm:h-[70vh] md:h-[80vh] min-h-[400px] sm:min-h-[500px] md:min-h-[600px] w-full flex items-center justify-center overflow-hidden">
-        <div className="absolute inset-0 z-0">
-          <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background-dark/90"></div>
-          <ParallaxImage
-            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDu21tUwKKHXQSIAYeINgWkKEQHZtca_YAhTpxxE1Ib1W7fQEILzP9YUc8yWCikSeEbV-BCPgTsyyX1ptA6TSpDiLWt9AuryqfPKlwI8zBOZOoQVNg0Qd1AIoM9EgqxA0RPM5RwehsLyvH1IYBoabIhsVuB9yLwOX002yx1bIAKrJ2dtmi57Ws5oVvDZbDlsgrEr03vU5GKft5_2I5-IVf01uRG5o6m2CRYpSP_l03xDkyGSVtl78Ovt1LU-jP_HZW7zp8O6yvNQuw"
-            alt="Close up of hands opening a luxury jewelry gift box with warm lighting"
-            className="relative w-full h-full"
-            speed={0.5}
-          />
-        </div>
-        <ScrollReveal direction="fade" delay={0.3}>
-          <div className="relative z-10 text-center px-4 max-w-4xl mx-auto flex flex-col items-center gap-4 sm:gap-6">
-            <h2 className="text-accent-gold text-xs sm:text-sm md:text-base font-medium tracking-[0.2em] uppercase mb-1 sm:mb-2">
-              Unwrap the Extraordinary
-            </h2>
-            <h1 className="text-white text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-display font-light leading-tight tracking-tight">
-              THE ART OF <br />
-              <span className="font-semibold text-accent-gold/90">GIFTING</span>
-            </h1>
-            <p className="text-gray-200 text-sm sm:text-base md:text-lg lg:text-xl font-light max-w-2xl leading-relaxed mt-1 sm:mt-2 opacity-90">
-              Discover gifts that transcend time. From marking milestones to
-              daily reminders of love, find the perfect piece to tell your
-              story.
-            </p>
-            <div className="mt-4 sm:mt-6 md:mt-8">
-              <Link
-                href="/products"
-                className="inline-flex items-center justify-center bg-primary hover:bg-primary-hover text-white text-xs sm:text-sm font-bold tracking-widest uppercase py-2 sm:py-3 px-5 sm:px-6 rounded-sm transition-all duration-300 transform hover:-translate-y-1 min-h-[44px]"
-              >
-                Explore Collection
-              </Link>
-            </div>
-          </div>
-        </ScrollReveal>
-      </section>
-
-      {/* Sticky Category Navigation */}
-      <div className="sticky top-[73px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur border-b border-gray-200 dark:border-gray-700 py-3 sm:py-4">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 overflow-x-auto hide-scrollbar">
-          <div className="flex items-center gap-3 sm:gap-4 min-w-max md:justify-center">
-            <Link
-              href="#"
-              className="px-4 sm:px-6 py-2 border border-gray-300 dark:border-gray-600 hover:border-primary text-text-main-light dark:text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm bg-white dark:bg-[#221c11] min-h-[44px] flex items-center justify-center"
-            >
-              Under $500
-            </Link>
-            <Link
-              href="#"
-              className="px-4 sm:px-6 py-2 border border-gray-300 dark:border-gray-600 hover:border-primary text-text-main-light dark:text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm bg-white dark:bg-[#221c11] min-h-[44px] flex items-center justify-center"
-            >
-              Most Loved
-            </Link>
-            <Link
-              href="#"
-              className="px-4 sm:px-6 py-2 border border-gray-300 dark:border-gray-600 hover:border-primary text-text-main-light dark:text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm bg-white dark:bg-[#221c11] min-h-[44px] flex items-center justify-center"
-            >
-              Personalized
-            </Link>
-            <Link
-              href="#"
-              className="px-4 sm:px-6 py-2 border border-gray-300 dark:border-gray-600 hover:border-primary text-text-main-light dark:text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm bg-white dark:bg-[#221c11] min-h-[44px] flex items-center justify-center"
-            >
-              For Her
-            </Link>
-            <Link
-              href="#"
-              className="px-4 sm:px-6 py-2 border border-gray-300 dark:border-gray-600 hover:border-primary text-text-main-light dark:text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm bg-white dark:bg-[#221c11] min-h-[44px] flex items-center justify-center"
-            >
-              For Him
-            </Link>
-            <Link
-              href="#"
-              className="px-4 sm:px-6 py-2 border border-gray-300 dark:border-gray-600 hover:border-primary text-text-main-light dark:text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm bg-white dark:bg-[#221c11] min-h-[44px] flex items-center justify-center"
-            >
-              Anniversary
-            </Link>
-          </div>
-        </div>
-      </div>
-
       {/* Editorial Feature Section */}
-      <section className="py-12 sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full">
+      <section className=" sm:py-16 md:py-20 px-4 sm:px-6 md:px-12 max-w-7xl mx-auto w-full">
         <div className="flex flex-col-reverse md:flex-row items-center gap-8 sm:gap-12 md:gap-20">
           <ScrollReveal direction="right" delay={0.2}>
             <div className="flex-1 space-y-6 sm:space-y-8 text-center md:text-left">
@@ -133,6 +52,49 @@ export default function GiftsPage() {
           </ScrollReveal>
         </div>
       </section>
+
+      {/* <div className="sticky top-[0px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur border-b border-gray-200 dark:border-gray-700 py-3 sm:py-4">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 overflow-x-auto hide-scrollbar">
+          <div className="flex items-center gap-3 sm:gap-4 min-w-max md:justify-center">
+            <Link
+              href="#"
+              className="px-4 sm:px-6 py-2 border border-gray-300 dark:border-gray-600 hover:border-primary text-text-main-light dark:text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm bg-white dark:bg-[#221c11] min-h-[44px] flex items-center justify-center"
+            >
+              Under $500
+            </Link>
+            <Link
+              href="#"
+              className="px-4 sm:px-6 py-2 border border-gray-300 dark:border-gray-600 hover:border-primary text-text-main-light dark:text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm bg-white dark:bg-[#221c11] min-h-[44px] flex items-center justify-center"
+            >
+              Most Loved
+            </Link>
+            <Link
+              href="#"
+              className="px-4 sm:px-6 py-2 border border-gray-300 dark:border-gray-600 hover:border-primary text-text-main-light dark:text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm bg-white dark:bg-[#221c11] min-h-[44px] flex items-center justify-center"
+            >
+              Personalized
+            </Link>
+            <Link
+              href="#"
+              className="px-4 sm:px-6 py-2 border border-gray-300 dark:border-gray-600 hover:border-primary text-text-main-light dark:text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm bg-white dark:bg-[#221c11] min-h-[44px] flex items-center justify-center"
+            >
+              For Her
+            </Link>
+            <Link
+              href="#"
+              className="px-4 sm:px-6 py-2 border border-gray-300 dark:border-gray-600 hover:border-primary text-text-main-light dark:text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm bg-white dark:bg-[#221c11] min-h-[44px] flex items-center justify-center"
+            >
+              For Him
+            </Link>
+            <Link
+              href="#"
+              className="px-4 sm:px-6 py-2 border border-gray-300 dark:border-gray-600 hover:border-primary text-text-main-light dark:text-white text-xs font-bold tracking-widest uppercase transition-colors rounded-sm bg-white dark:bg-[#221c11] min-h-[44px] flex items-center justify-center"
+            >
+              Anniversary
+            </Link>
+          </div>
+        </div>
+      </div> */}
 
       {/* Best Sellers Product Carousel */}
       <section className="py-12 sm:py-16 bg-[#fcf7ef] dark:bg-[#2c2417] border-y border-gray-200 dark:border-gray-700">
@@ -449,33 +411,6 @@ export default function GiftsPage() {
               </Link>
             </div>
           </div>
-        </div>
-      </section>
-
-      {/* Newsletter Section */}
-      <section className="bg-[#fcf7ef] dark:bg-[#1a150d] py-12 sm:py-16 md:py-20 border-t border-gray-200 dark:border-gray-700">
-        <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
-          <div className="text-4xl text-primary mb-4 sm:mb-6">✉</div>
-          <h3 className="text-xl sm:text-2xl md:text-3xl font-display font-light text-text-main-light dark:text-text-main-dark mb-3 sm:mb-4">
-            JOIN THE GOLDEN CIRCLE
-          </h3>
-          <p className="text-text-muted-light dark:text-text-muted-dark mb-6 sm:mb-8 font-light text-sm sm:text-base">
-            Sign up to receive exclusive offers, early access to new
-            collections, and a welcome gift on your first order.
-          </p>
-          <form className="flex flex-col md:flex-row gap-3 sm:gap-4">
-            <input
-              className="flex-1 bg-white dark:bg-[#221c11] border border-gray-300 dark:border-gray-700 text-text-main-light dark:text-white px-4 sm:px-6 py-2 sm:py-3 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary rounded-sm placeholder:text-text-muted-light dark:placeholder:text-text-muted-dark text-sm"
-              placeholder="Enter your email address"
-              type="email"
-            />
-            <button
-              className="bg-primary hover:bg-primary-hover text-white text-xs sm:text-sm font-bold tracking-widest uppercase py-2 sm:py-3 px-6 sm:px-8 rounded-sm transition-colors min-h-[44px] flex items-center justify-center"
-              type="submit"
-            >
-              Subscribe
-            </button>
-          </form>
         </div>
       </section>
 

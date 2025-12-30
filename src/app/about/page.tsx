@@ -83,7 +83,7 @@ export default function AboutPage() {
       </section>
 
       {/* Filter / Tabs Section */}
-      <section className="sticky top-[73px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur border-y border-gray-200 dark:border-gray-700">
+      <section className="sticky top-[0px] z-40 bg-background-light/95 dark:bg-background-dark/95 backdrop-blur border-y border-gray-200 dark:border-gray-700">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
           <div className="flex overflow-x-auto gap-4 sm:gap-6 md:gap-8 lg:gap-12 py-4 scrollbar-hide">
             <Link

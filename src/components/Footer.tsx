@@ -87,21 +87,42 @@ export default function Footer() {
         </div>
         <div>
           <h4 className="font-bold text-xs sm:text-sm uppercase tracking-wider mb-3 sm:mb-4">
-            Newsletter
+            Legal
           </h4>
-          <p className="text-xs text-text-muted-light dark:text-text-muted-dark mb-3 sm:mb-4">
-            Subscribe for latest updates and offers.
-          </p>
-          <div className="flex">
-            <input
-              className="w-full px-3 py-2 text-xs border border-gray-300 dark:border-gray-700 dark:bg-gray-800 rounded-l-sm focus:outline-none focus:border-primary"
-              placeholder="Your email"
-              type="email"
-            />
-            <button className="bg-primary text-white px-3 sm:px-4 py-2 text-xs rounded-r-sm hover:bg-primary-hover transition-colors min-h-[44px]">
-              Join
-            </button>
-          </div>
+          <ul className="space-y-2 text-xs text-text-muted-light dark:text-text-muted-dark">
+            <li>
+              <Link
+                href="/terms"
+                className="hover:text-primary transition-colors"
+              >
+                Terms of Service
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/privacy"
+                className="hover:text-primary transition-colors"
+              >
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/refund"
+                className="hover:text-primary transition-colors"
+              >
+                Refund Policy
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/shipping"
+                className="hover:text-primary transition-colors"
+              >
+                Shipping Policy
+              </Link>
+            </li>
+          </ul>
         </div>
       </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 mt-8 sm:mt-12 pt-6 sm:pt-8 border-t border-gray-100 dark:border-gray-800 text-center text-xs text-text-muted-light dark:text-text-muted-dark">
